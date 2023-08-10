@@ -34,7 +34,7 @@ public class WashMachine {
     public boolean add(Cloth dirtyCloth) {
         // 如果洗衣機已有10件衣服，回傳失敗
         if (count >= MAX_SIZE) {
-            return falsey;
+            return false;
         }
 
         // 先把目前最後節點保存
