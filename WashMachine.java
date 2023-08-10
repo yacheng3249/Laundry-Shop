@@ -32,16 +32,16 @@ public class WashMachine {
      * @return
      */
     public boolean add(Cloth dirtyCloth) {
-        //如果洗衣機已有10件衣服，回傳失敗
+        // 如果洗衣機已有10件衣服，回傳失敗
         if (count >= MAX_SIZE) {
-            return false;
+            return falsey;
         }
 
-        //先把目前最後節點保存
+        // 先把目前最後節點保存
         Node temp = tail;
-        //再把新的節點加到尾巴後面
+        // 再把新的節點加到尾巴後面
         tail.next = new Node(dirtyCloth);
-        //更新尾巴位置
+        // 更新尾巴位置
         tail = tail.next;
         tail.previous = temp;
 
